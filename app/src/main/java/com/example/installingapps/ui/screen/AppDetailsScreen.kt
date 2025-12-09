@@ -102,31 +102,32 @@ fun AppInfoCard(
     Column(
         Modifier
             .fillMaxWidth()
-            .padding(20.dp, 20.dp)
+            .padding(20.dp)
     ) {
-        val paddingModifier = Modifier.padding(0.dp, 10.dp)
-        Text(
-            text = appInfo.title,
-            style = MaterialTheme.typography.titleSmall,
-            modifier = paddingModifier
-        )
 
+        val paddingModifier = Modifier.padding(0.dp, 7.dp)
         Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
+            modifier = paddingModifier
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.Bottom
         ) {
-
             Text(
-                text = appInfo.packageName,
-                style = MaterialTheme.typography.bodyMedium
+                text = appInfo.title,
+                style = MaterialTheme.typography.titleSmall,
+
             )
 
-            val versionStr = stringResource(R.string.version_str)
             Text(
-                text = versionStr + appInfo.versionName.toString(),
+                text = appInfo.versionName.toString(),
                 style = MaterialTheme.typography.bodyMedium
             )
         }
+
+        Text(
+            text = appInfo.packageName,
+            style = MaterialTheme.typography.bodyMedium
+        )
 
         val spacerModifier = Modifier.height(40.dp)
         Spacer(modifier = spacerModifier)
