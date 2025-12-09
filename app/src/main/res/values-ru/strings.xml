@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="information_str">Информация о приложении</string>
+    <string name="launch_str">ЗАПУСТИТЬ ПРИЛОЖЕНИЕ</string>
+    <string name="installed_str">Установленные приложения</string>
+    <string name="version_str">"Версия: "</string>
+    <string name="loading_str">Загрузка...</string>
+    <string name="checksum_str">"Контрольная сумма: "</string>
+</resources>

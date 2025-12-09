@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">InstallingApps</string>
+    <string name="information_str">Infotmation about appication</string>
+    <string name="launch_str">LAUNCH APP</string>
+    <string name="installed_str">Installed applications</string>
+    <string name="version_str">Version:</string>
+    <string name="loading_str">Loading...</string>
+    <string name="checksum_str">Checksum:</string>
+</resources>
