@@ -1,7 +1,5 @@
 package com.example.installingapps.ui.viewmodel
 
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.installingapps.data.AppInfo
@@ -15,7 +13,6 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@RequiresApi(Build.VERSION_CODES.P)
 @HiltViewModel
 class AppsListViewModel @Inject constructor(
     private val repository: AppsListRepository

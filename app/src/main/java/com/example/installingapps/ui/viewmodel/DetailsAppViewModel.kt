@@ -7,7 +7,6 @@ import com.example.installingapps.data.AppsDetailsRepository
 import com.example.installingapps.ui.state.AppsDetailsEvent
 import com.example.installingapps.ui.state.AppsDetailsState
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
