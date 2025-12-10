@@ -2,15 +2,18 @@ package com.example.installingapps.data
 
 import android.content.Context
 import dagger.hilt.android.qualifiers.ApplicationContext
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import java.io.File
 import java.security.MessageDigest
 import javax.inject.Inject
 
+@ViewModelScoped
 class AppsDetailsRepository @Inject constructor(
     @ApplicationContext private val context: Context,
     private val packageName: String
@@ -37,6 +40,7 @@ class AppsDetailsRepository @Inject constructor(
                 checksum = checksum.await(),
             )
 
+        scope.cancel()
         return flow {
             emit(app)
         }

@@ -15,7 +15,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 import androidx.core.graphics.createBitmap
+import dagger.hilt.android.scopes.ViewModelScoped
 
+@ViewModelScoped
 class AppsListRepository @Inject constructor(
     @ApplicationContext private val context: Context
 ) : AppsRepository {
