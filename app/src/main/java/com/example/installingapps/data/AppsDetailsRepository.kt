@@ -5,6 +5,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import java.io.File
@@ -37,6 +38,7 @@ class AppsDetailsRepository @Inject constructor(
                 checksum = checksum.await(),
             )
 
+        scope.cancel()
         return flow {
             emit(app)
         }
